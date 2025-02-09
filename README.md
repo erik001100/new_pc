@@ -1,2 +1,2 @@
 # new_pc
-setup new debian machine for development
+setup new machine for development
