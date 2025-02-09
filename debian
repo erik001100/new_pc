@@ -1,0 +1,35 @@
+# as root
+su -
+apt-get update
+apt-get upgrade
+
+
+# add user to sudoers
+# https://phoenixnap.com/kb/create-a-sudo-user-on-debian
+
+# as root
+su -
+sudo usermod -aG sudo <username>
+sudo visudo
+
+# enter the following for the user: <username> ALL=(ALL:ALL) ALL
+exit
+
+# install keepassxc
+sudo apt-get install keepassxc
+
+# prepare machine for python development
+# https://realpython.com/intro-to-pyenv/#install
+
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev \
+xz-utils tk-dev libffi-dev liblzma-dev python3-openssl git
+
+curl https://pyenv.run | bash
+# will need to setup ~/.bash_profile and ~/.bashrc
+# get commands from laptop
+
+### TODO
+# setup git
+# setup vscode
+# gnupg
